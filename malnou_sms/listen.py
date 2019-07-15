@@ -23,7 +23,6 @@ def listenNewMessages():
     inboxID = getInboxes(TextLocal_api_key)
 
     while True:
-        print("1 loop")
         messages = getMessages(TextLocal_api_key, inboxID)
         messages = messages['messages']
         # print(messages)
