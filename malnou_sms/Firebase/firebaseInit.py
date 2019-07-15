@@ -5,9 +5,9 @@ from firebase_admin import credentials
 from firebase_admin import db
 
 def firebaseInit():
-    cred = credentials.Certificate('malnou-526e9db8402c.json')
+    cred = credentials.Certificate({'Path/Json file'})
     firebase_admin.initialize_app(cred, {
-        'databaseURL': 'https://malnou.firebaseio.com/'
+        'databaseURL': {'Database url'}
     })
 
     dbReference = db.reference('/')
