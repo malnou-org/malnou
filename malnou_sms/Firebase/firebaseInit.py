@@ -4,10 +4,11 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-def firebaseInit():
-    cred = credentials.Certificate({'Path/Json file'})
+
+def firebaseInit(Url, fbJson):
+    cred = credentials.Certificate(fbJson)
     firebase_admin.initialize_app(cred, {
-        'databaseURL': {'Database url'}
+        'databaseURL': Url
     })
 
     dbReference = db.reference('/')

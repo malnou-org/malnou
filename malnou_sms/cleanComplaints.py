@@ -2,7 +2,7 @@ import json
 from translate import translate, translator_init
 from datetime import datetime
 
-def cleanComplaints(data):
+def cleanComplaints(data, keyword):
     # print(data)
     now =  datetime.now()
     message_dict = {}
@@ -13,7 +13,7 @@ def cleanComplaints(data):
         # print(diff.total_seconds())
         if diff.total_seconds() <= 60 and "COMPLAINT" in i["message"]:
             message = i["message"]
-            message = message.replace('AHW4L', '')
+            message = message.replace(keyword, '')
             message = message.replace('COMPLAINT', '')
             translated_message = translate(
                 translator_init(),
