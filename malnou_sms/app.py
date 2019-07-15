@@ -3,19 +3,12 @@ from flask import jsonify
 from flask import request
 from flask import Flask
 from flask import make_response
-from multiprocessing.pool import ThreadPool
+from multiprocessing import Process, Value
 import time
 
 from listen import listenNewMessages
 
 app = Flask(__name__)
-
-@app.route('/api/v1.0/listener', methods=['POST'])
-def create_listener():
-        listenNewMessages()
-        return make_response(jsonify(
-                {'Status': 'Listener started successfully'}
-        ), 200)
 
 @app.route('/api/v1.0/add_new_contacts', methods=['POST'])
 def addNewContacts():
@@ -27,4 +20,7 @@ def not_found(error):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+        p = Process(target=listenNewMessages)
+        p.start()  
+        app.run(debug=True)
+        p.join()
