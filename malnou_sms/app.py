@@ -22,5 +22,5 @@ def not_found(error):
 if __name__ == "__main__":
         p = Process(target=listenNewMessages)
         p.start()  
-        app.run(debug=True)
+        app.run(debug=True, use_reloader=False)
         p.join()
