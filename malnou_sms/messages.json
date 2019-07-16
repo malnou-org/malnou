@@ -1,0 +1,20 @@
+{
+    "messages":[
+        {
+            "name" : "GreetingMessage",
+            "message": "Thank you for enrolling your child in our Anganwadi.\nSchooling plays a very important role in the life of a child. \nWe promise to take good care of your child."
+        },
+        {
+            "name" : "FoodPlan",
+            "message" : "Every Anganwadi is expected to follow a strict food plan. \n \n This is the weekly plan that is expected to be followed \n \n Mon: Bele, Palak soppu, Nugge soppu and other soppu \n \n Tue: Bele, Boodu kumbalakai, carrot beans, yele kosu, beetroot \n \n Wed: Bele, Nuggekai, beans aloo, Tomato \n \n Thu: Bele, kumbalakai, sorekai, southekai sambar, bendekai, heerekai, moolangi \n \n Fri: Bisi bele bath \n \n Sat: Chapati \n \n In addition to these, eggs and bananas are also provided twice a week. \n \n We advise you to keep a note of this and confirm with your child/children  \n \n if they are receiving proper food and supplements. \n \n Any further updates regarding the food plan will be informed."
+        },
+        {
+            "name" : "Assurance",
+            "message" : "Your voice is heard! \n If you have any complaints regarding the functioning of Anganwadis or the quality of food, send a message to the number 9220592205 with the keyword 'FTDCY COMPLAINT' followed by your complaint. \n We promise that every complaint is anonymous and we will take immediate action towards it."
+        },
+        {
+            "name" : "Reply",
+            "message" : "Thank you for taking the time to bring this to our attention. \n We promise to take immediate action towards it."
+        }
+    ]
+}

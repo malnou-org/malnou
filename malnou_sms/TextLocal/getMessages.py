@@ -12,5 +12,3 @@ def getMessages(apikey, inboxID):
     respData = json.loads(f.read())
     return(respData)
  
-# resp =  getMessages('UT/RPKl0qmU-NTECDfhMmIceqYoRjks3z1GPVE9Bjf', '10')
-# print (resp)
