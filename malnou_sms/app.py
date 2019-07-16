@@ -10,6 +10,8 @@ import time
 from listen import listenNewMessages
 from setDefaultMessages import setDefaultMessages
 from getDefaultMessages import getDefaultMessages
+from TextLocal.sendMessage import sendSMS
+from configparser import ConfigParser
 
 app = Flask(__name__)
 
@@ -34,6 +36,33 @@ def setMessages():
 @app.route('/api/v1.0/get_messages', methods=['GET'])
 def getMessages():
         return jsonify(getDefaultMessages())
+
+@app.route('/api/v1.0/sendMessages', methods=['POST'])
+def sndMssg():
+        if not request.json:
+                abort(400)
+        cfg = ConfigParser()
+        cfg.read('config.ini')
+        return sendSMS(cfg.get('TextLocalKeys', 'TextLocal_api_key'), request.json["numbers"], request.json["message"])
+
+@app.route('/api/v1.0/sendDefaultMessages', methods=['POST'])
+def sndDefaultMssg():
+        if not request.json:
+                abort(400)
+        if request.json["message_type"] == "GreetingMessage":
+                req_list_id = 0
+        elif request.json["message_type"] == "FoodPlan":
+                req_list_id = 1
+        elif request.json["message_type"] == "Assurance":
+                req_list_id = 2
+        elif request.json["message_type"] == "Reply":
+                req_list_id = 3
+        else:
+                abort(400)
+        message = getDefaultMessages()["messages"][req_list_id]["message"]
+        cfg = ConfigParser()
+        cfg.read('config.ini')
+        return sendSMS(cfg.get('TextLocalKeys', 'TextLocal_api_key'), request.json["numbers"], message)
 
 
 @app.errorhandler(404)
