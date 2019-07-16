@@ -23,7 +23,7 @@ Before you can start using malnou_sms you need to create a 'TextLocal' account a
 Take these values and input them in the config file
 
 2. Create a firebase project and obtain the JSON file containing the private key.
-for more information refer to this firebase documentation https://firebase.google.com/docs/admin/setup 
+for more information refer to this firebase [documentation](https://firebase.google.com/docs/admin/setup) 
 
 3. Install dependencies
 
@@ -52,4 +52,103 @@ sudo pip install -r requirements.txt
 python app.py
 ```
 
-This should start a flask server with rest apis running on your local host
+This should start a flask server with rest apis running on your localhost
+
+## Usage
+When you start the server, a listener process runs in the background and listens to any new messages (Complaints). 
+If a new complaint is received, The complaint is translated from its regional language and this translated message is used to obtain valuable insights regarding the type of complaint, keyphrases in the complaint and the overall sentiment of the complaint using IBM Watson's Natural Language Understanding API. 
+
+You can communicate with the server by doing these API calls
+
+**getMessages**
+----
+  Returns JSON data about the default messages that are saved on the server.
+
+* **URL**
+
+    /api/v1.0/get_messages
+
+* **Method:**
+
+    `GET`
+
+* **Success Response:**
+
+  * **Code:** 200
+  * **Content:** `{"messages": [{"name": "GreetingMessage", "message": "Hello"}]}`
+
+* **Sample Call:**
+
+  ```bash
+  curl -i http://localhost:5000/api/v1.0/get_messages
+  ```
+
+**setMessages**
+----
+  Used to set the default messages that can be sent from the system.
+
+* **URL**
+
+    /api/v1.0/set_messages
+
+* **Method:**
+
+    `POST`
+
+* **Success Response:**
+
+  * **Code:** 200
+  * **Content:** `{"messages": [{"name": "GreetingMessage", "message": "Ok"}]}`
+
+* **Sample Call:**
+
+  ```bash
+  curl -i -H "Content-Type: application/json" -X POST -d '{"messages":[{"name": "GreetingMessage", "message": "Ok"}]}' http://localhost:5000/api/v1.0/set_messages
+  ```
+
+**sendDefaultMessages**
+----
+  Used to send the default messages to the contacts of your choice.
+
+* **URL**
+
+    /api/v1.0/send_default_messages
+
+* **Method:**
+
+    `POST`
+
+* **Success Response:**
+
+  * **Code:** 200
+
+* **Sample Call:**
+
+  ```bash
+  curl -i -H "Content-Type: application/json" -X POST -d '{"numbers":[91xxxxxxxx, 91xxxxxxxxxx], "message_type": "GreetingMessage"} http://localhost:5000/api/v1.0/send_default_messages
+  ```
+  For more information related to the different message types as used in the above sample check out the 'messages.json' file.
+
+**sendMessages**
+----
+  Used to send messages to the contacts of your choice.
+
+* **URL**
+
+    /api/v1.0/send_messages
+
+* **Method:**
+
+    `POST`
+
+* **Success Response:**
+
+  * **Code:** 200
+
+* **Sample Call:**
+
+  ```bash
+  curl -i -H "Content-Type: application/json" -X POST -d '{"numbers":[91xxxxxxxx, 91xxxxxxxxxx], "message": "Hello"} http://localhost:5000/api/v1.0/send_messages
+  ```
+
+

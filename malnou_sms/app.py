@@ -37,7 +37,7 @@ def setMessages():
 def getMessages():
         return jsonify(getDefaultMessages())
 
-@app.route('/api/v1.0/sendMessages', methods=['POST'])
+@app.route('/api/v1.0/send_messages', methods=['POST'])
 def sndMssg():
         if not request.json:
                 abort(400)
@@ -45,7 +45,7 @@ def sndMssg():
         cfg.read('config.ini')
         return sendSMS(cfg.get('TextLocalKeys', 'TextLocal_api_key'), request.json["numbers"], request.json["message"])
 
-@app.route('/api/v1.0/sendDefaultMessages', methods=['POST'])
+@app.route('/api/v1.0/send_default_messages', methods=['POST'])
 def sndDefaultMssg():
         if not request.json:
                 abort(400)

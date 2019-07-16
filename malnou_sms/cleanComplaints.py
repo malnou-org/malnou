@@ -11,7 +11,7 @@ def cleanComplaints(data, keyword):
         message_date = datetime.strptime(message_date, '%Y-%m-%d %H:%M:%S')
         diff = now - message_date
         # print(diff.total_seconds())
-        if diff.total_seconds() <= 60 and "COMPLAINT" in i["message"]:
+        if (diff.total_seconds() <= 60 or i["isNew"] == True) and "COMPLAINT" in i["message"]:
             message = i["message"]
             message = message.replace(keyword, '')
             message = message.replace('COMPLAINT', '')
