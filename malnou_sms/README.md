@@ -25,7 +25,15 @@ Take these values and input them in the config file
 2. Create a firebase project and obtain the JSON file containing the private key.
 for more information refer to this firebase [documentation](https://firebase.google.com/docs/admin/setup) 
 
-3. Install dependencies
+3. Create an IBM cloud account and create a new resource of watson NLU.
+Using watson's knowlege studio we created a custom entity model using the [dataset](https://drive.google.com/open?id=1j0L7xip-3p6JMLND6yZ0R1jT8ATx5c6i) of complaints that we collected.
+
+Follow IBM's documentation on how to create the custom entity model [here](https://cloud.ibm.com/docs/services/natural-language-understanding?topic=natural-language-understanding-customizing)
+
+Once these above steps are followed, get API_Key, url, VERSION, and modelID.
+Stoe these variables in 'config.ini'
+
+4. Install dependencies
 
 First, install python 3.6
 ```bash
@@ -56,7 +64,9 @@ This should start a flask server with rest apis running on your localhost
 
 ## Usage
 When you start the server, a listener process runs in the background and listens to any new messages (Complaints). 
-If a new complaint is received, The complaint is translated from its regional language and this translated message is used to obtain valuable insights regarding the type of complaint, keyphrases in the complaint and the overall sentiment of the complaint using IBM Watson's Natural Language Understanding API. 
+If a new complaint is received, The complaint is translated from its regional language and this translated message is used to obtain valuable insights regarding the type of complaint, keyphrases in the complaint and the overall sentiment of the complaint using IBM Watson's Natural Language Understanding API.
+
+If everything was set up correctly this is how your database will look like when you send a message
 
 You can communicate with the server by doing these API calls
 

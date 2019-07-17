@@ -2,7 +2,12 @@ import json
 from translate import translate, translator_init
 from datetime import datetime
 
+from Watson.watsonNLU import watsonNLU
+from configparser import ConfigParser
+
 def cleanComplaints(data, keyword):
+    cfg = ConfigParser()
+    cfg.read('config.ini')
     # print(data)
     now =  datetime.now()
     message_dict = {}
@@ -19,13 +24,20 @@ def cleanComplaints(data, keyword):
                 translator_init(),
                 message
             )
+            insights = watsonNLU(
+                cfg.get('WatsonNLU', 'version'),
+                cfg.get('WatsonNLU', 'apikey'),
+                cfg.get('WatsonNLU', 'url'),
+                cfg.get('WatsonNLU', 'modelID'),
+                translated_message.text
+            )
             message_dict =  {
                     "number": i["number"],
                     "date": i["date"],
                     "complaint": message,
                     "translated": translated_message.text,
-                    "class": {
-                    }
+                    "keywords": insights['keywords'],
+                    "entities": insights['entities']
                 }
     return message_dict
 
