@@ -14,8 +14,12 @@ It's also important to have an electronic system to maintain the record of these
 
 Our solution consists of 
 * A height scanner which uses an ultrasonic sensor.
-* A Xiomi scale 2 to obtain the weight and impedance values of the child.
+* A Xiaomi scale 2 to obtain the weight and impedance values of the child.
 * An NFC module(PN532) to read the ID card data of the child.
 * A Raspberry Pi to read all these data and estimate the body metrics then send all the data to the Watson IoT platform.
 
 ## How does it work?
+
+1. A child is made to stand on the weight scale and the scale measures the weight of the child and the impedance.
+2. The Id card of the child is wiped on the NFC module and the child's ID is obtained.
+3. The height of the child is obtained using the height scanner. A spirit level attached to the scanner is used to keep the sensor pointed perpendicularly down towards the ground.
