@@ -68,6 +68,20 @@ If a new complaint is received, The complaint is translated from its regional la
 
 If everything was set up correctly this is how your database will look like when you send a message
 
+![Sent](https://github.com/malnou-org/malnou/blob/master/malnou_sms/Images/sent.jpeg)
+
+Here the message is sent using the keyword 'AHW4L COMPLAINT'. 'AHW4L' is the text local keyword which is used to redirect the messages to our inbox when you send the messages to 9220592205.
+The message sent here was in a regional language.
+
+![db](https://github.com/malnou-org/malnou/blob/master/malnou_sms/Images/database.jpeg)
+
+This is the snapshot of the database. 
+"Complaint" is the actual complaint sent by the parent in any regional language.
+"Translated" is the english translation of the complaint.
+In Entities the "Type" represents the type of the complaint entity. This can be Child abuse, School infrastructure related, PoorStaff and School meal related.
+
+We can send messages to parents through API calls.
+
 You can communicate with the server by doing these API calls
 
 **getMessages**
