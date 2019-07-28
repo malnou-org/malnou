@@ -23,3 +23,4 @@ Our solution consists of
 1. A child is made to stand on the weight scale and the scale measures the weight of the child and the impedance.
 2. The Id card of the child is wiped on the NFC module and the child's ID is obtained.
 3. The height of the child is obtained using the height scanner. A spirit level attached to the scanner is used to keep the sensor pointed perpendicularly down towards the ground.
+4. The raspberry pi recieves these metrics and estimates the previously mentioned body metrics. Then it sends all these data to the watson Iot platform.
