@@ -21,6 +21,10 @@ Our solution consists of
 ## How does it work?
 
 1. A child is made to stand on the weight scale and the scale measures the weight of the child and the impedance.
-2. The Id card of the child is wiped on the NFC module and the child's ID is obtained.
+![Scale](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/scaletest.jpeg)
+2. The ID card of the child is swiped on the NFC module and the child's ID is obtained.
+![IDcard](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/IDcard.jpg)
 3. The height of the child is obtained using the height scanner. A spirit level attached to the scanner is used to keep the sensor pointed perpendicularly down towards the ground.
+![Height](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/heightscannerTest.jpg)
 4. The raspberry pi recieves these metrics and estimates the previously mentioned body metrics. Then it sends all these data to the watson Iot platform.
+![Data](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/data.png)
