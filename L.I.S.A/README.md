@@ -14,14 +14,20 @@ It's also important to have an electronic system to maintain the record of these
 
 Our solution consists of 
 * A height scanner which uses an ultrasonic sensor.
+![Scale](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/heightscanner.jpg)
+The scanner has a spirit level to maintain a parallel level with the ground.
+![Level](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/spiritlevel.jpg)
 * A Xiaomi scale 2 to obtain the weight and impedance values of the child.
+![Scale](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/xaiomiscale.jpg)
 * An NFC module(PN532) to read the ID card data of the child.
+![PN532](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/pn532.jpg)
 * A Raspberry Pi to read all these data and estimate the body metrics then send all the data to the Watson IoT platform.
+![Pi](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/raspberrypi.jpg)
 
 ## How does it work?
 
 1. A child is made to stand on the weight scale and the scale measures the weight of the child and the impedance.
-![Scale](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/scaletest.jpeg)
+![Scaletest](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/scaletest.jpeg)
 2. The ID card of the child is swiped on the NFC module and the child's ID is obtained.
 ![IDcard](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/IDcard.jpg)
 3. The height of the child is obtained using the height scanner. A spirit level attached to the scanner is used to keep the sensor pointed perpendicularly down towards the ground.
