@@ -36,3 +36,4 @@ The scanner has a spirit level to maintain a parallel level with the ground.
 ![Data](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/data.png)
 
 ## Configuration and Setup
+For instalation and configuration check out this 
