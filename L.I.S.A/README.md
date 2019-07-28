@@ -34,3 +34,5 @@ The scanner has a spirit level to maintain a parallel level with the ground.
 ![Height](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/heightscannerTest.jpg)
 4. The raspberry pi recieves these metrics and estimates the previously mentioned body metrics. Then it sends all these data to the watson Iot platform.
 ![Data](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/data.png)
+
+## Configuration and Setup
