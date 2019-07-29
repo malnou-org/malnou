@@ -25,6 +25,7 @@ Our SMS based communication system using Watson NLU. The parents can raise compl
 
 To learn more about malnou_sms check it's readme [here.](https://github.com/malnou-org/malnou/blob/master/malnou_sms/README.md)
 
+
 * ***L.I.S.A*** 
 
 LISA is our low-cost IoT solution to help screen children to enable efficient tracking of their health data. The current method of diagnosing and tracking involves maintaining data in the form of a paper register. Our solution measures these metrics electronically and streams them to IBM cloud where they are stored. Unlike the existing system, we don't just measure BMI, we are ale to measure Protein percentage, Muscle mass, Bone mass, Body fat percent, and many other metrics. 
@@ -32,6 +33,8 @@ LISA is our low-cost IoT solution to help screen children to enable efficient tr
 If we can identify that the state of the child is improving from this data, we can provide an incentive-based raise to the workers which should motivate them to put that extra effort that will go a long way in improving the condition of the child. Since all the data is measured electronically and sent to the cloud, there is no room for manipulation.
 
 For more information related to L.I.S.A check it's [readme.](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/README.md)
+
+![LISA](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/Images/heightscannerTest.jpg)
 
 * ***NFC based Identification and Tracking***
 
