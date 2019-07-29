@@ -70,17 +70,20 @@ If everything was set up correctly this is how your database will look like when
 
 ![Sent](https://github.com/malnou-org/malnou/blob/master/malnou_sms/Images/sent.jpeg)
 
-Here the message is sent using the keyword 'AHW4L COMPLAINT'. 'AHW4L' is the text local keyword which is used to redirect the messages to our inbox when you send the messages to 9220592205.
-The message sent here was in a regional language.
+***Here the message is sent using the keyword 'AHW4L COMPLAINT'. 'AHW4L' is the text local keyword which is used to redirect the messages to our inbox when you send the messages to 9220592205.
+The message sent here was in a regional language.***
 
 ![db](https://github.com/malnou-org/malnou/blob/master/malnou_sms/Images/database.jpeg)
 
-This is the snapshot of the database. 
+***This is the snapshot of the database. 
 "Complaint" is the actual complaint sent by the parent in any regional language.
 "Translated" is the english translation of the complaint.
-In Entities the "Type" represents the type of the complaint entity. This can be Child abuse, School infrastructure related, PoorStaff and School meal related.
+In Entities the "Type" represents the type of the complaint entity. This can be Child abuse, School infrastructure related, PoorStaff and School meal related.***
 
 We can send messages to parents through API calls.
+![Recieved](https://github.com/malnou-org/malnou/blob/master/malnou_sms/Images/recieved.jpeg)
+
+***Here 'FTDCY' is our keyword like 'AHW4L'. The actual solution will consist of only 1 keyword. We used 2 keywords because the credits expired in the first keyword.*** 
 
 You can communicate with the server by doing these API calls
 
