@@ -114,5 +114,20 @@ Waiting for card removing...done.
 ## Dependencies
 To install all the dependencies type
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
+In order to communicate with IBM cloud, L.I.S.A uses the watson Iot platform. Create an account and create a new device.
+Now copy all the credentials required and paste it in the [device.cfg](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/device.cfg) file.
+
+## Setup
+Setting up of L.I.S.A is fairly simple. We should now link the mac address of the Xaiomi scale with L.I.S.A.
+For that all we need to do is
+1. Stand on the scale to wake it up from sleep.
+2. run the command 
+```bash 
+sudo python3 setup.py
+```
+This should automatically find the mac address of the Xaiomi scale and configure L.I.S.A.
+
+Congratulations! Now your L.I.S.A is setup and ready for use.
+Go back to the main [Readme](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/README.md)
