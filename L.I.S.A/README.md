@@ -37,3 +37,20 @@ The scanner has a spirit level to maintain a parallel level with the ground.
 
 ## Configuration and Setup
 For configuration and setup, read this [doc](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/docs/ConfigurationandSetup.md)
+
+
+## Running
+
+  Type 
+  ```bash
+  sudo python3 main.py
+  ```
+  Note: Add your NFC tag ID manually in the students.csv file.
+  
+  After running the abouve script, 
+  1. Make the kid stand on the xaiomi scale and wait for the scale to measure your height and impedence. The impedence value should finish reading once the line on the scale stops blinking.
+  
+  2. Hold the height scanner to the head of the child and position it with the help of the spirit level.
+  
+  3. Swipe the NFC card on the NFC module and the data is measured and sent to IBM cloud and stored in Cloudant.
+  
