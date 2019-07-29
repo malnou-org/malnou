@@ -19,19 +19,24 @@ After speaking to the workers and staff in these anganwadis and the parents of t
 Our project consists of a multipart solution to address these above problems.
 ![Solution](https://github.com/malnou-org/malnou/blob/master/images/solution.jpg)
 
-* malnou_sms 
+* ***malnou_sms*** 
 
 Our SMS based communication system using Watson NLU. The parents can raise complaints they have related to child abuse, poor infrastructure, food conditions, etc. This enables the parents to receive notifications related to their child's health status, a food plan of the Anganwadi and any other activities. If the parents feel like they are part of the system, they feel more empowered thereby reducing the no of kids that are leaving these anganwadis.
 
 To learn more about malnou_sms check it's readme [here.](https://github.com/malnou-org/malnou/blob/master/malnou_sms/README.md)
 
-* L.I.S.A 
+* ***L.I.S.A*** 
 
 LISA is our low-cost IoT solution to help screen children to enable efficient tracking of their health data. The current method of diagnosing and tracking involves maintaining data in the form of a paper register. Our solution measures these metrics electronically and streams them to IBM cloud where they are stored. Unlike the existing system, we don't just measure BMI, we are ale to measure Protein percentage, Muscle mass, Bone mass, Body fat percent, and many other metrics. 
 
 If we can identify that the state of the child is improving from this data, we can provide an incentive-based raise to the workers which should motivate them to put that extra effort that will go a long way in improving the condition of the child. Since all the data is measured electronically and sent to the cloud, there is no room for manipulation.
 
-* NFC based Identification and Tracking
+For more information related to L.I.S.A check it's [readme.](https://github.com/malnou-org/malnou/blob/master/L.I.S.A/README.md)
+
+* ***NFC based Identification and Tracking***
 
 NFC modules are implemented in L.I.S.A, We use NFC tags to identify and verify the child during the medical screening process. A child is assigned to an NFC tag during registration and this is the unique ID of the child. If a child moves to a different place we still have the medical and educational data of the child stored in the cloud so re-enrolling in a new Anganwadi should be super easy. This will enable better tracking of these migrant children to ensure that their health condition is improving. 
+
+## Project roadmap
+![roadmap](https://github.com/malnou-org/malnou/blob/master/images/screencapture-infograph-venngage-edit-b3669ab5-45d1-4e6f-87da-0b867703503b-2019-07-29-22_27_46.png)
 
