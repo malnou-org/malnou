@@ -40,3 +40,10 @@ NFC modules are implemented in L.I.S.A, We use NFC tags to identify and verify t
 ## Project roadmap
 ![roadmap](https://github.com/malnou-org/malnou/blob/master/images/screencapture-infograph-venngage-edit-b3669ab5-45d1-4e6f-87da-0b867703503b-2019-07-29-22_27_46.png)
 
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/malnou-org/malnou/blob/master/CODE_OF_CONDUCT.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/malnou-org/malnou/blob/master/LICENSE) file for details
